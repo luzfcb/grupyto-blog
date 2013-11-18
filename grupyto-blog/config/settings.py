@@ -400,8 +400,8 @@ class Production(Common):
 
     ########## EMAIL
     DEFAULT_FROM_EMAIL = values.Value(
-            'grupyto-blog <grupyto-blog-noreply@grupyto.info>')
-    EMAIL_HOST = values.Value('smtp.sendgrid.com')
+            'grupyto-blog <fabiobdev@gmail.com>')
+    EMAIL_HOST = values.Value('smtp.gmail.com')
     EMAIL_HOST_PASSWORD = values.SecretValue(environ_prefix="", environ_name="SENDGRID_PASSWORD")
     EMAIL_HOST_USER = values.SecretValue(environ_prefix="", environ_name="SENDGRID_USERNAME")
     EMAIL_PORT = values.IntegerValue(587, environ_prefix="", environ_name="EMAIL_PORT")
