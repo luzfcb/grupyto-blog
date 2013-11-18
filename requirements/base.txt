@@ -36,6 +36,9 @@ django-avatar==2.0
 
 django-suit
 
+docutils
+Markdown
+
 # Your custom requirements go here
 #-e git://github.com/luzfcb/django-blog-zinnia.git@fix-wrong-datetime-usage-in-zinnia-tags-django_16##egg=django-blog-zinnia
 

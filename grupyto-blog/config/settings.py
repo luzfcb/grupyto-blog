@@ -247,6 +247,7 @@ class Common(Configuration):
     ZINNIA_MARKUP_LANGUAGE = 'markdown'
     #ZINNIA_MARKUP_LANGUAGE = 'restructuredtext'
     MARKDOWN_EDITOR_SKIN = 'simple'
+    #WYSIWYG = 'markitup'
 
     ZINNIA_SPAM_CHECKER_BACKENDS = ('zinnia.spam_checker.backends.automattic',)
     ZINNIA_URL_SHORTENER_BACKEND = 'zinnia.url_shortener.backends.default'
