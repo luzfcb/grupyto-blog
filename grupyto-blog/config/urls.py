@@ -43,28 +43,29 @@ urlpatterns = patterns('',
     url(r'^blog/xmlrpc/$', 'django_xmlrpc.views.handle_xmlrpc'),
 )
 
-urlpatterns += patterns('',
-                       url(r'^velho/$',
-                           TemplateView.as_view(template_name='pages/home.html'),
-                           name="home"),
-                       url(r'^velho_about/$',
-                           TemplateView.as_view(template_name='pages/about.html'),
-                           name="about"),
+#urlpatterns += patterns('',
+#                       url(r'^velho/$',
+#                           TemplateView.as_view(template_name='pages/home.html'),
+#                           name="home"),
+#                       url(r'^velho_about/$',
+#                           TemplateView.as_view(template_name='pages/about.html'),
+#                           name="about"),
+#
+#                       # Uncomment the next line to enable the admin:
+#                       #url(r'^admin/', include(admin.site.urls)),
+#
+#                       # User management
+#                       url(r'^users/', include("users.urls", namespace="users")),
+#                       url(r'^accounts/', include('allauth.urls')),
+#
+#                       # Uncomment the next line to enable avatars
+#                       url(r'^avatar/', include('avatar.urls')),
+#
+#                       # Your stuff: custom urls go here
+#
+#)
 
-                       # Uncomment the next line to enable the admin:
-                       #url(r'^admin/', include(admin.site.urls)),
-
-                       # User management
-                       url(r'^users/', include("users.urls", namespace="users")),
-                       url(r'^accounts/', include('allauth.urls')),
-
-                       # Uncomment the next line to enable avatars
-                       url(r'^avatar/', include('avatar.urls')),
-
-                       # Your stuff: custom urls go here
-
-) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+urlpatterns += patterns('',) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 sitemaps = {
@@ -88,9 +89,3 @@ urlpatterns += patterns(
     url(r'^404/$', 'django.views.defaults.page_not_found'),
 )
 
-if settings.DEBUG:
-    urlpatterns += patterns(
-        '',
-        url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
-            {'document_root': settings.MEDIA_ROOT})
-    )
