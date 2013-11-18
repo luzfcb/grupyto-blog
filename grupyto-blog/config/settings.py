@@ -244,7 +244,8 @@ class Common(Configuration):
     ########## END SLUGLIFIER
 
     ########## Zinnia
-    ZINNIA_MARKUP_LANGUAGE = 'markdown'
+    ZINNIA_MARKUP_LANGUAGE = os.environ.get('ZINNIA_MARKUP_LANGUAGE', 'markdown')
+    #ZINNIA_MARKUP_LANGUAGE = 'markdown'
     #ZINNIA_MARKUP_LANGUAGE = 'restructuredtext'
     MARKDOWN_EDITOR_SKIN = 'simple'
     #WYSIWYG = 'markitup'
