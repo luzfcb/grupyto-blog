@@ -244,14 +244,16 @@ class Common(Configuration):
     ########## END SLUGLIFIER
 
     ########## Zinnia
-    #ZINNIA_MARKUP_LANGUAGE = 'markdown'
-    ZINNIA_MARKUP_LANGUAGE = 'restructuredtext'
+    ZINNIA_MARKUP_LANGUAGE = 'markdown'
+    #ZINNIA_MARKUP_LANGUAGE = 'restructuredtext'
     MARKDOWN_EDITOR_SKIN = 'simple'
+
     ZINNIA_SPAM_CHECKER_BACKENDS = ('zinnia.spam_checker.backends.automattic',)
+    ZINNIA_URL_SHORTENER_BACKEND = 'zinnia.url_shortener.backends.default'
     AKISMET_SECRET_API_KEY = os.environ.get('AKISMET_SECRET_API_KEY')
     BITLY_LOGIN = os.environ.get('BITLY_LOGIN')
     BITLY_API_KEY = os.environ.get('BITLY_API_KEY')
-    ZINNIA_URL_SHORTENER_BACKEND = 'zinnia.url_shortener.backends.bitly'
+
     TWITTER_CONSUMER_KEY = os.environ.get('TWITTER_CONSUMER_KEY')
     TWITTER_CONSUMER_SECRET = os.environ.get('TWITTER_CONSUMER_SECRET')
     TWITTER_ACCESS_KEY = os.environ.get('TWITTER_ACCESS_KEY')
